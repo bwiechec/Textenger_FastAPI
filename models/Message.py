@@ -8,9 +8,9 @@ class Message(BaseModel):
   timestamp: int;
   withoutBg: bool;
 
-class UpdateMessage(BaseModel):
-  threadId: Optional[str]
-  userId: Optional[str]
-  message: Optional[str]
-  timestamp: Optional[int]
-  withoutBg: Optional[bool]
+class OptionalMessage(BaseModel):
+  threadId: Optional[str] = None
+  userId: Optional[str] = None
+  message: Optional[str] = None
+  timestamp: Optional[int] = None
+  withoutBg: Optional[bool] = None
