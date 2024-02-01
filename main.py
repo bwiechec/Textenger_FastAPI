@@ -3,7 +3,6 @@ from routes.Message import router as MessageRouter
 from routes.User import router as UserRouter
 from routes.Thread import router as ThreadRouter
 from fastapi import FastAPI, __version__
-from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
 
 app = FastAPI()
@@ -12,7 +11,6 @@ app.include_router(MessageRouter)
 app.include_router(UserRouter)
 app.include_router(ThreadRouter)
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
 html = f"""
 <!DOCTYPE html>
 <html>
