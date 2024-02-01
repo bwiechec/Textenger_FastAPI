@@ -5,7 +5,7 @@ from routes.Thread import router as ThreadRouter
 from fastapi import FastAPI, __version__
 from fastapi.responses import RedirectResponse
 
-app = FastAPI()
+app = FastAPI(title="Textenger", description="Textenger API", version="0.1.0")
 
 app.include_router(MessageRouter)
 app.include_router(UserRouter)
